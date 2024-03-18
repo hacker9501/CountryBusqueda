@@ -8,22 +8,37 @@
 import UIKit
 
 class DetalleViewController: UIViewController {
-
+    @IBOutlet weak var capital: UILabel!
+    @IBOutlet weak var imagenCountry: UIImageView!
+    @IBOutlet weak var descriptionCountry: UITextView!
+    @IBOutlet weak var country: UILabel!
+    
+    var detailCountry: CountryModel?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+            country.text = detailCountry?.name.common
+            capital.text = detailCountry?.capital?.first?.description
+            
+            if let altText = detailCountry?.flags.alt {
+                descriptionCountry.text = altText
+            } else {
+                descriptionCountry.text = "Valor Predeterminado"
+            }
+            
+            if let urlString = detailCountry?.coatOfArms.png, let url = URL(string: urlString) {
+                URLSession.shared.dataTask(with: url) { data, response, error in
+                    if let data = data, let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self.imagenCountry.image = image
+                        }
+                    }
+                }.resume()
+            }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Element
-struct CountryList: Codable {
+struct CountrySearchModel: Codable {
     let name: Names
     let tld: [String]
     let cca2, ccn3, cca3, cioc: String
@@ -134,4 +134,4 @@ struct PostCode: Codable {
     let format, regex: String
 }
 
-typealias ListEmpty = [CountryList]
+//typealias SearchEmpty = [CountrySearchModel]

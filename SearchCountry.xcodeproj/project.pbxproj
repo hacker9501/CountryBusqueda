@@ -13,6 +13,15 @@
 		739391CB2B83A80B0000B848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739391C92B83A80B0000B848 /* Main.storyboard */; };
 		739391CD2B83A80D0000B848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739391CC2B83A80D0000B848 /* Assets.xcassets */; };
 		739391D02B83A80D0000B848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739391CE2B83A80D0000B848 /* LaunchScreen.storyboard */; };
+		739391DC2B83B4900000B848 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739391DB2B83B4900000B848 /* CountryModel.swift */; };
+		739391DE2B83B4C30000B848 /* ContrySearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739391DD2B83B4C30000B848 /* ContrySearchModel.swift */; };
+		739391E02B83B8000000B848 /* NetworkCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739391DF2B83B8000000B848 /* NetworkCountry.swift */; };
+		739391E22B83BF430000B848 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739391E12B83BF430000B848 /* CountryViewModel.swift */; };
+		73CC64E72B8683E600DD72D5 /* CeldaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC64E52B8683E600DD72D5 /* CeldaViewCell.swift */; };
+		73CC64E82B8683E600DD72D5 /* CeldaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73CC64E62B8683E600DD72D5 /* CeldaViewCell.xib */; };
+		73CC64EA2B868BE000DD72D5 /* NetworkSearchCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC64E92B868BE000DD72D5 /* NetworkSearchCountry.swift */; };
+		73CC64EC2B868EED00DD72D5 /* SearchCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC64EB2B868EED00DD72D5 /* SearchCountryViewModel.swift */; };
+		73CC64F02B86A86B00DD72D5 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC64EF2B86A86A00DD72D5 /* DetalleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		739391CC2B83A80D0000B848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		739391CF2B83A80D0000B848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		739391D12B83A80D0000B848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		739391DB2B83B4900000B848 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		739391DD2B83B4C30000B848 /* ContrySearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrySearchModel.swift; sourceTree = "<group>"; };
+		739391DF2B83B8000000B848 /* NetworkCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCountry.swift; sourceTree = "<group>"; };
+		739391E12B83BF430000B848 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
+		73CC64E52B8683E600DD72D5 /* CeldaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaViewCell.swift; sourceTree = "<group>"; };
+		73CC64E62B8683E600DD72D5 /* CeldaViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CeldaViewCell.xib; sourceTree = "<group>"; };
+		73CC64E92B868BE000DD72D5 /* NetworkSearchCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSearchCountry.swift; sourceTree = "<group>"; };
+		73CC64EB2B868EED00DD72D5 /* SearchCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountryViewModel.swift; sourceTree = "<group>"; };
+		73CC64EF2B86A86A00DD72D5 /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,56 @@
 		739391C22B83A80B0000B848 /* SearchCountry */ = {
 			isa = PBXGroup;
 			children = (
+				739391DA2B83B1FE0000B848 /* NetworkManager */,
+				739391D72B83B1670000B848 /* Model */,
+				739391D92B83B1930000B848 /* View */,
+				739391D82B83B1820000B848 /* ViewModel */,
 				739391C32B83A80B0000B848 /* AppDelegate.swift */,
 				739391C52B83A80B0000B848 /* SceneDelegate.swift */,
-				739391C72B83A80B0000B848 /* ViewController.swift */,
-				739391C92B83A80B0000B848 /* Main.storyboard */,
 				739391CC2B83A80D0000B848 /* Assets.xcassets */,
 				739391CE2B83A80D0000B848 /* LaunchScreen.storyboard */,
 				739391D12B83A80D0000B848 /* Info.plist */,
 			);
 			path = SearchCountry;
+			sourceTree = "<group>";
+		};
+		739391D72B83B1670000B848 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				739391DB2B83B4900000B848 /* CountryModel.swift */,
+				739391DD2B83B4C30000B848 /* ContrySearchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		739391D82B83B1820000B848 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				739391E12B83BF430000B848 /* CountryViewModel.swift */,
+				73CC64EB2B868EED00DD72D5 /* SearchCountryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		739391D92B83B1930000B848 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				739391C72B83A80B0000B848 /* ViewController.swift */,
+				739391C92B83A80B0000B848 /* Main.storyboard */,
+				73CC64E52B8683E600DD72D5 /* CeldaViewCell.swift */,
+				73CC64E62B8683E600DD72D5 /* CeldaViewCell.xib */,
+				73CC64EF2B86A86A00DD72D5 /* DetalleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		739391DA2B83B1FE0000B848 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				739391DF2B83B8000000B848 /* NetworkCountry.swift */,
+				73CC64E92B868BE000DD72D5 /* NetworkSearchCountry.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +186,7 @@
 			files = (
 				739391D02B83A80D0000B848 /* LaunchScreen.storyboard in Resources */,
 				739391CD2B83A80D0000B848 /* Assets.xcassets in Resources */,
+				73CC64E82B8683E600DD72D5 /* CeldaViewCell.xib in Resources */,
 				739391CB2B83A80B0000B848 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +198,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				739391DE2B83B4C30000B848 /* ContrySearchModel.swift in Sources */,
 				739391C82B83A80B0000B848 /* ViewController.swift in Sources */,
+				73CC64E72B8683E600DD72D5 /* CeldaViewCell.swift in Sources */,
+				73CC64EC2B868EED00DD72D5 /* SearchCountryViewModel.swift in Sources */,
+				73CC64EA2B868BE000DD72D5 /* NetworkSearchCountry.swift in Sources */,
+				73CC64F02B86A86B00DD72D5 /* DetalleViewController.swift in Sources */,
 				739391C42B83A80B0000B848 /* AppDelegate.swift in Sources */,
+				739391E02B83B8000000B848 /* NetworkCountry.swift in Sources */,
+				739391DC2B83B4900000B848 /* CountryModel.swift in Sources */,
+				739391E22B83BF430000B848 /* CountryViewModel.swift in Sources */,
 				739391C62B83A80B0000B848 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +367,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,6 +395,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
